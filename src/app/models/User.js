@@ -4,9 +4,9 @@ module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
     "User",
     {
-      id: DataTypes.INTEGER,
       name: DataTypes.STRING,
       username: DataTypes.STRING,
+      email: DataTypes.STRING,
       password_hash: DataTypes.STRING,
       password: DataTypes.VIRTUAL
     },
@@ -14,4 +14,6 @@ module.exports = (sequelize, DataTypes) => {
       hooks: {}
     }
   );
+
+  return User;
 };

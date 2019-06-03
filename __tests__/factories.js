@@ -6,7 +6,8 @@ factory.define("User", User, {
   name: faker.name.findName(),
   username: faker.internet.userName(),
   email: faker.internet.email(),
-  password: faker.internet.password()
+  password: faker.internet.password(),
+  password_hash: faker.internet.password()
 });
 
 module.exports = factory;
