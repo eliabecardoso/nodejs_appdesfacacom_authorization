@@ -9,28 +9,31 @@ module.exports = {
         autoIncrement: true,
         allowNull: false
       },
+      name: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       username: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true,
-        length: 100
+        unique: true
       },
       email: {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true
       },
-      password: {
+      password_hash: {
         type: Sequelize.STRING,
         primaryKey: true,
         allowNull: false
       },
-      lastConnection: {
+      last_connection: {
         type: Sequelize.DATE,
         allowNull: true
       },
-      createdAt: Sequelize.DATE,
-      updatedAt: Sequelize.DATE
+      created_at: Sequelize.DATE,
+      updated_at: Sequelize.DATE
     });
   },
 
