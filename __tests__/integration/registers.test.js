@@ -5,7 +5,7 @@ const app = require("../../src/app");
 const truncate = require("../util/truncate");
 const factory = require("../factories");
 
-const routePrefix = "/api/";
+const routePrefix = "/authorization/";
 
 describe("Registration", () => {
   beforeEach(async () => {

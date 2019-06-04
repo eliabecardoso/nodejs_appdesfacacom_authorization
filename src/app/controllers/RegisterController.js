@@ -2,7 +2,7 @@ const { User } = require("../models");
 
 class RegisterController {
   async store(req, res) {
-    const { username, email, ...rest } = req.body && req.body.user;
+    const { username, email, ...rest } = req.body && req.body.user || null; 
 
     if (!username || !email)
       return res
@@ -24,7 +24,7 @@ class RegisterController {
     if (typeof errorOnCreate === "string")
       return res.status(400).json({ message: user });
 
-    return res.status(200).json(user);
+    return res.status(200).json();
   }
 }
 
