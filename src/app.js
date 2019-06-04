@@ -4,6 +4,7 @@ class AppController {
   constructor() {
     this.express = express();
     this.middlewares();
+    this.routes();
   }
 
   middlewares() {
@@ -11,7 +12,7 @@ class AppController {
   }
 
   routes() {
-    this.express.route("/api", require("./route"));
+    this.express.use("/api", require("./routes"));
   }
 }
 
